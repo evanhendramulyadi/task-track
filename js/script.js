@@ -5,7 +5,7 @@ const taskList = document.getElementById("taskList");
 const filterButtons = document.querySelectorAll(".filters button");
 const errorMsg = document.getElementById("errorMsg");
 
-let tasks = [];
+let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 let currentFilter = "all";
 
 taskInput.addEventListener("input", function () {
@@ -49,6 +49,8 @@ form.addEventListener("submit", function (e) {
         completed: false
     });
 
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+
     form.reset();
     renderTasks();
 });
@@ -81,7 +83,6 @@ function renderTasks() {
             const finalSize = Math.max(13, baseSize - shrink * 0.4);
             title.style.fontSize = finalSize + "px";
 
-
             const date = document.createElement("small");
             date.textContent = task.date;
 
@@ -97,6 +98,7 @@ function renderTasks() {
 
             completeBtn.onclick = function () {
                 task.completed = true;
+                localStorage.setItem("tasks", JSON.stringify(tasks));
                 renderTasks();
             };
 
@@ -106,6 +108,7 @@ function renderTasks() {
 
             deleteBtn.onclick = function () {
                 tasks = tasks.filter(t => t.id !== task.id);
+                localStorage.setItem("tasks", JSON.stringify(tasks));
                 renderTasks();
             };
 
@@ -127,3 +130,5 @@ filterButtons.forEach(btn => {
         renderTasks();
     });
 });
+
+renderTasks();
