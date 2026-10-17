@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Task Track</title>
     <link rel="icon" type="image/png" href="img/logo-task-track.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -13,14 +16,17 @@
 
     <div class="app">
 
-        <h1>Task Track</h1>
+        <div class="header">
+            <img src="img/logo-task-track.png" alt="Task Track Logo" class="logo">
+            <h1>Task Track</h1>
+        </div>
 
         <form id="taskForm" class="input-group">
 
-            <input type="text" id="taskInput" placeholder="Add a task" maxlength="18">
+            <input type="text" id="taskInput" placeholder="Add a task" maxlength="18" autocomplete="off">
             <input type="date" id="dateInput">
 
-            <button type="submit">+</button>
+            <button type="submit" title="Add task">+</button>
 
         </form>
 
@@ -35,7 +41,7 @@
         <ul id="taskList"></ul>
 
         <div class="copyright">
-                    &copy; 2026–Present Evan Hendra Mulyadi. All Rights Reserved.
+            &copy; 2026–Present Evan Hendra Mulyadi. All Rights Reserved.
         </div>
 
     </div>
