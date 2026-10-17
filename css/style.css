@@ -371,17 +371,24 @@ li:hover {
     transform: translateY(-1px);
 }
 
-.task-completed .complete-btn {
-    background: #22c55e;
-    color: #ffffff;
-    border-color: #22c55e;
-    cursor: default;
-    opacity: 0.85;
+.task-completed .complete-btn,
+.complete-btn:disabled {
+    background: rgba(148, 163, 184, 0.12);
+    color: #94a3b8;
+    border: 1px solid rgba(148, 163, 184, 0.25);
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: 0.75;
+    box-shadow: none;
 }
 
-.task-completed .complete-btn:hover {
+.task-completed .complete-btn:hover,
+.complete-btn:disabled:hover {
     transform: none;
     box-shadow: none;
+    background: rgba(148, 163, 184, 0.12);
+    color: #94a3b8;
+    border-color: rgba(148, 163, 184, 0.25);
 }
 
 .delete-btn {

@@ -176,10 +176,10 @@ Tasks are modeled as lightweight, self-contained JavaScript objects and persiste
 
 ## 📄 Copyright & Terms of Use
 
-© 2026 Evan. All Rights Reserved.
+© 2026 Evan Hendra Mulyadi. All Rights Reserved.
 
 ### Intellectual Property & Repository Guidelines
-This project is an original creation by **Evan**.
+This project is an original creation by **Evan Hendra Mulyadi**.
 
 This repository is maintained publicly for the purpose of transparency, portfolio display, technical study, and peer review of client-side web application development practices:
 

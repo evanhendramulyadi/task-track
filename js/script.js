@@ -96,11 +96,15 @@ function renderTasks() {
             completeBtn.className = "complete-btn";
             completeBtn.textContent = task.completed ? "Completed" : "Complete";
 
-            completeBtn.onclick = function () {
-                task.completed = true;
-                localStorage.setItem("tasks", JSON.stringify(tasks));
-                renderTasks();
-            };
+            if (task.completed) {
+                completeBtn.disabled = true;
+            } else {
+                completeBtn.onclick = function () {
+                    task.completed = true;
+                    localStorage.setItem("tasks", JSON.stringify(tasks));
+                    renderTasks();
+                };
+            }
 
             const deleteBtn = document.createElement("button");
             deleteBtn.textContent = "Delete";
