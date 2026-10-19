@@ -14,11 +14,12 @@ Experience the live application here:
 ## ✨ Key Features
 
 - **Task Management**: Create tasks with titles and target due dates.
-- **Input Validation**: Prevents past dates and enforces an 18-character task limit with real-time feedback.
-- **Dynamic Filtering**: Filter tasks seamlessly between **All**, **Active**, and **Completed** views.
-- **Visual Status Tracking**: Interactive completion toggle with strike-through styling and disabled action state.
+- **Input Validation & Real-time Feedback**: Prevents past dates and provides a live character counter for the 18-character task limit.
+- **Progress Tracking**: Real-time progress bar with completion percentages and motivational status cues.
+- **Dynamic Filtering**: Filter tasks seamlessly between **All**, **Active**, and **Completed** views with live count badges.
+- **Visual Status Tracking**: Interactive circular completion toggle, smart due-date badges (Today, Tomorrow, Overdue), and smooth strike-through animations.
 - **Local Persistence**: Tasks are saved locally in the browser via the `localStorage` API, keeping data available across sessions.
-- **Modern Dark UI**: Ambient glassmorphism interface with fluid responsive layouts for mobile and desktop screens.
+- **Modern Dark Luxe UI**: Ambient floating aurora glow, glassmorphism card with specular highlights, and fluid responsive layouts for mobile and desktop screens.
 
 ## 🛠️ Tech Stack
 

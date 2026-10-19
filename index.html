@@ -13,43 +13,102 @@
 </head>
 
 <body>
+    <!-- Ambient Background Glows -->
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
+    <div class="ambient-glow glow-3"></div>
 
-    <div class="app">
+    <main class="app">
 
-        <div class="header">
-            <img src="img/logo-task-track.png" alt="Task Track Logo" class="logo">
-            <h1>Task Track</h1>
+        <!-- App Header -->
+        <header class="header">
+            <div class="logo-wrapper">
+                <img src="img/logo-task-track.png" alt="Task Track Logo" class="logo">
+                <div class="logo-glow"></div>
+            </div>
+            <div class="header-content">
+                <h1>Task Track</h1>
+                <p class="subtitle" id="currentDateStr">Minimalist Daily Planner</p>
+            </div>
+        </header>
+
+        <!-- Progress Overview Card -->
+        <div class="progress-card" id="progressCard">
+            <div class="progress-header">
+                <span class="progress-title">Daily Progress</span>
+                <span class="progress-percent" id="progressPercent">0%</span>
+            </div>
+            <div class="progress-track">
+                <div class="progress-fill" id="progressBarFill"></div>
+            </div>
+            <div class="progress-footer">
+                <span class="progress-count" id="progressStats">0 of 0 completed</span>
+                <span class="progress-status" id="progressStatus">Ready to focus</span>
+            </div>
         </div>
 
-        <form id="taskForm" class="input-group">
+        <!-- Task Input Form -->
+        <form id="taskForm" class="task-form input-group">
+            <div class="input-card">
+                <div class="text-input-wrap">
+                    <svg class="input-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="12" y1="8" x2="12" y2="12"></line>
+                        <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                    </svg>
+                    <input type="text" id="taskInput" placeholder="What needs to be done?" maxlength="18" autocomplete="off" spellcheck="false">
+                    <span id="charCount" class="char-count">0/18</span>
+                </div>
 
-            <input type="text" id="taskInput" placeholder="Add a task" maxlength="18" autocomplete="off">
-            <input type="date" id="dateInput">
+                <div class="input-actions-row">
+                    <div class="date-input-wrap">
+                        <svg class="date-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="16" y1="2" x2="16" y2="6"></line>
+                            <line x1="8" y1="2" x2="8" y2="6"></line>
+                            <line x1="3" y1="10" x2="21" y2="10"></line>
+                        </svg>
+                        <input type="date" id="dateInput" aria-label="Due date">
+                    </div>
 
-            <button type="submit" title="Add task" aria-label="Add task">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="12" y1="5" x2="12" y2="19"></line>
-                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                </svg>
-            </button>
-
+                    <button type="submit" id="addBtn" class="add-btn" title="Add task" aria-label="Add task">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                        <span>Add Task</span>
+                    </button>
+                </div>
+            </div>
         </form>
 
         <p id="errorMsg"></p>
 
-        <div class="filters">
-            <button data-filter="all" class="active">All</button>
-            <button data-filter="active">Active</button>
-            <button data-filter="completed">Completed</button>
+        <!-- Filter Segmented Control -->
+        <div class="filters" role="tablist">
+            <button data-filter="all" class="active" type="button" role="tab" aria-selected="true">
+                <span>All</span>
+                <span class="filter-badge" id="countAll">0</span>
+            </button>
+            <button data-filter="active" type="button" role="tab" aria-selected="false">
+                <span>Active</span>
+                <span class="filter-badge" id="countActive">0</span>
+            </button>
+            <button data-filter="completed" type="button" role="tab" aria-selected="false">
+                <span>Completed</span>
+                <span class="filter-badge" id="countCompleted">0</span>
+            </button>
         </div>
 
+        <!-- Task List -->
         <ul id="taskList"></ul>
 
-        <div class="copyright">
+        <!-- Footer -->
+        <footer class="copyright">
             &copy; 2026–Present Evan Hendra Mulyadi. All Rights Reserved.
-        </div>
+        </footer>
 
-    </div>
+    </main>
 
     <script src="js/script.js"></script>
 </body>
