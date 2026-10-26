@@ -2,7 +2,7 @@
   <img src="img/logo-task-track.png" alt="Task Track Logo" width="100">
 </p>
 
-<h1 align="center">Task Track</h1>
+<h1 align="left">Task Track</h1>
 
 Task Track is a sleek, minimalist client-side task management web application designed to help users organize, schedule, and prioritize daily workflows directly in their browser.
 
