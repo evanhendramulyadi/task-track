@@ -49,7 +49,7 @@ No build tools or external dependencies are required.
 
 ## 📄 Copyright & Ownership
 
-© 2026 Evan Hendra Mulyadi. All Rights Reserved.
+© 2026–Present Evan Hendra Mulyadi. All Rights Reserved.
 
 This project is an original work created by **Evan Hendra Mulyadi**.
 
