@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="img/logo-task-track.png" alt="Task Track Logo" width="100">
+  <img src="img/task-track-logo.png" alt="Task Track Logo" width="100">
 </p>
 
 <h1 align="left">Task Track</h1>
